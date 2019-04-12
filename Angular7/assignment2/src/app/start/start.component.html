@@ -1,0 +1,13 @@
+<div class="newFrnd">
+<a routerLink='/friends'>Add New Friends</a>
+</div>
+<div *ngIf="!(friends.length==0)">
+    <h4>Friends List</h4>
+    <ul class="friends">
+        <li *ngFor="let friend of friends">
+          <a routerLink="/details/{{friend.id}}">
+            <span class="badge">{{friend.id}}</span>{{friend.name}}
+          </a>
+        </li>
+      </ul>
+  </div>
